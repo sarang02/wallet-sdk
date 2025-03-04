@@ -91,7 +91,7 @@ phantom.show();
 // To navigate to the swapper
 phantom.swap({
   buy: "solana:101:EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v", // Caip19 token address https://github.com/ChainAgnostic/CAIPs/blob/main/CAIPs/caip-19.md
-  sell: "solana:101:EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v", // Caip19 token address
+  sell: "solana:101:3gwytmYnwHndXPpsDrujq3Ma828h5fAXK9uPumYRLEgA", // Caip19 token address
   amount: "100000000", // Amount to sell
 });
 
