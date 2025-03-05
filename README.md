@@ -1,44 +1,44 @@
 # Phantom Embedded Wallet SDK
 
-Phantom Embedded enables you to seamlessly onboard users to your application, without requiring them to have previously
-installed a wallet. With Phantom Embedded, users can create a self custodial wallet with just their Google account and a
-4-digit pin. Once created, this wallet will automatically sync with [Phantom](https://phantom.app)'s mobile and
-extension apps without the user needing to know their seed phrase or manage any private keys.
+팬텀 임베디드를 사용하면 사용자가 이전에 사용할 필요 없이 애플리케이션에 원활하게 탑승할 수 있습니다.
+지갑을 설치했습니다. 팬텀 임베디드를 사용하면 사용자는 구글 계정과 a만으로 자체 보관 지갑을 만들 수 있습니다.
+                                                                          4자리 핀. 일단 만들어지면, 이 지갑은 자동으로 동기화됩니다.                                                                            [팬텀](https://phantom.app)의 모바일과 자동으로 동기화됩니다.[팬텀](https://phantom.app)모바일과
+사용자가 시드 문구를 알거나 개인 키를 관리할 필요가 없는 확장 앱입니다.
 
-In addition to powering wallet creation, Phantom Embedded also comes with a built-in UI for users to view and manage
+팬텀 임베디드는 지갑 생성에 전원을 공급하는 것 외에도 사용자가 보고 관리할 수 있는 UI가 내장되어 있습니다.
 their holdings. This UI serves as a trusted interface for users to sign messages and transactions on your app.
 
 ## Features
 
 - Create self custodial wallets without leaving your application
 - Onboard users via Sign in with Google and a 4-digit pin (no seed phrases)
-- Sync embedded wallets with Phantom's mobile and extension apps
-- Sign transactions and message on Solana (more chains coming soon)
-- View, send, and receive tokens on Solana, Ethereum, Bitcoin, Base, and Polygon
-- Pricing: **FREE**
+- 임베디드 지갑을 팬텀의 모바일 및 확장 앱과 동기화하세요.
+- 솔라나에 대한 거래 및 메시지 서명 (곧 더 많은 체인이 옵니다)
+- 솔라나, 이더리움, 비트코인, 베이스, 폴리곤에서 토큰을 보고 보내고 받습니다.
+-  가격 책정:  **무료**
 
-## Quickstart
+## 퀵스타트
 
-1. Install the Phantom Embedded SDK
+1. 팬텀 임베디드 SDK 설치
 
-```bash
-yarn | npm | pnpm add @phantom/wallet-sdk
+```바쉬
+실 | npm | pnpm 추가 @phantom/지갑-sdk
 ```
 
-2. Load the Phantom Embedded wallet in your web application
+2.  웹 애플리케이션에 팬텀 내장 지갑을 로드하십시오.
 
-```tsx
-import {createPhantom} from "@phantom/wallet-sdk"
+```TSX
+"@phantom/wallet-sdk"에서 {createPhantom}을 가져오십시오.
 
 const opts: CreatePhantomConfig = {
-    zIndex: 10_000,
-    hideLauncherBeforeOnboarded: true,
+ zIndex: 10_000, 
+ hideLauncherBeforeOnboarded: true, 
 }
 
 const App = () => {
-    useEffect(() => {
-       const phantom = createPhantom(opts);
-    }, []);
+ useEffect(() => { 
+ const phantom = createPhantom(opts); 
+ }, []); 
 ...
 }
 ```
