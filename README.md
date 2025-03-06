@@ -1,50 +1,50 @@
-# Phantom Wallet SDK
+#  팬텀 월렛 SDK
 
-This monorepo contains the Phantom Wallet SDK and a demo application that demonstrates its usage.
+이 모노레포에는 팬텀 월렛 SDK와 그 사용을 보여주는 데모 애플리케이션이 포함되어 있습니다.
 
-## Overview
+##  개요
 
-The Phantom Wallet SDK allows you to integrate Phantom's wallet functionality directly into your web application. It provides a simple interface for interacting with the wallet, including showing/hiding the wallet UI, performing swaps and purchases, and accessing chain-specific RPC interfaces for Solana, Ethereum, Sui, and Bitcoin.
+팬텀 월렛 SDK를 사용하면 팬텀의 지갑 기능을 웹 애플리케이션에 직접 통합할 수 있습니다. 지갑 UI 보여주기/숨기기, 스왑 및 구매 수행, 솔라나, 이더리움, 수이, 비트코인용 체인별 RPC 인터페이스 접속 등 지갑과 상호작용하기 위한 간단한 인터페이스를 제공한다.
 
-## Packages
+##  패키지
 
-- **@phantom/wallet-sdk**: The core SDK that provides the Phantom wallet integration.
-- **@phantom/demo-app**: A React-based demo app that demonstrates how to use the SDK.
+- **@phantom/지갑-sdk**: 팬텀 지갑 통합을 제공하는 핵심 SDK.
+- **@phantom/데모앱**: SDK 사용 방법을 보여주는 React 기반 데모 앱입니다.
 
-## Getting Started
+## 시작하기
 
-### Installation
+### 설치
 
-```bash
-# Using npm
-npm install @phantom/wallet-sdk
+```바쉬
+npm 사용 #
+NPM 설치 @phantom/지갑-SDK
 
-# Using yarn
-yarn add @phantom/wallet-sdk
+원사를 사용하는 #
+실 추가 @phantom/지갑-sdk
 
-# Using pnpm
-pnpm add @phantom/wallet-sdk
+pnpm을 사용하는 #
+pnpm 추가 @phantom/지갑-sdk
 ```
 
-### Basic Usage
+###  기본사용법
 
-```typescript
-import { createPhantom, Position } from "@phantom/wallet-sdk";
+```활자
+"@phantom/wallet-sdk"에서 가져오기 {Phantom, Position }를 생성합니다.
 
-// Create a wallet instance
-const phantom = await createPhantom({
-  position: Position.bottomRight,
-  hideLauncherBeforeOnboarded: false,
-  namespace: "my-app",
+// 지갑 인스턴스 생성
+const phantom = wait createPhantom({
+ 위치: 위치.bottomRight, 
+ hideLauncherBeforeOnboarded: false, 
+ 네임스페이스: "my-app", 
 });
 
-// Show the wallet
-phantom.show();
+// 지갑을 보여주세요
+팬텀.쇼();
 
-// Access blockchain-specific interfaces
-// Solana
-const solanaPublicKey = await phantom.solana.connect();
-console.log("Connected Solana account:", solanaPublicKey.toString());
+// 블록체인 특화 인터페이스에 액세스하십시오.
+// 솔라나
+const solanaPublicKey = wait phantom.solana.connect();
+console.log("Connected Solana Account:", solanaPublicKey.toString());
 
 // Ethereum
 const ethereumAccounts = await phantom.ethereum.request({
